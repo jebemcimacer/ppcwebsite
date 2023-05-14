@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#jumpScare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 9999;
+}
+
+#jumpScare img {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  font-size: 24px; /* Nastavte požadovanú veľkosť písma */
+  padding: 20px 40px; /* Nastavte požadovaný odsah (padding) tlačidla */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+</style>
+<script>
+function showJumpScare() {
+    var element = document.getElementById("jumpScare");
+    element.style.display = "flex";
+    element.innerHTML = "<img src='giphy.gif' alt='Jump Scare'>";
+    var audio = new Audio('jozi.mp3');
+    audio.play();
+}
+</script>
+</head>
+<body>
+<button onclick="showJumpScare()">Kliknite sem!</button>
+<div id="jumpScare" style="display: none;"></div>
+
+<body bgcolor='grey'>
+
+ <form action="">
+<input type="text" placeholder="krstné meno" style='color:red;'><br><br>
+<input type="text" placeholder="priezvisko" style='color:red;'><br><br>
+<input type="text" placeholder="emailova adresa" style='color:red;' ><br><br>
+<fieldset style='background-color:green,font-size:20px;width:350px;'>
+<legend>Čo si</legend>
+<input type='checkbox' name='volba' value='Gay'>Gay<br>
+<input type='checkbox' name='volba' value='Gay'>Gay<br>
+<input type='checkbox' name='volba' value='neklam že nesi gay'>neklam že nesi gay<br><br>
+<input type="date" ><br><br>
+<textarea name="" id="" cols="30" rows="10" placeholder='Niečo o vás' style='color:red;background-color:pink'></textarea> <br><br>
+<input type="submit" value="Odoslať"><br>
+<a href="default.asp"><img src="shrek.jpg"></a>
+</body>
+</html>
